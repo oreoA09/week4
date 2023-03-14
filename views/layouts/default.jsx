@@ -1,13 +1,15 @@
 const React = require("react");
 
-function DefaultLayout(props) {
+function DefaultLayout(html) {
   return (
     <html>
       <head>
-        <title>{props.title}</title>
+        <title>{html.title}</title>
       </head>
       <body>
-        {props.children}</body>
+        <h1>HTML Rendering</h1>
+        <div>{html.children}</div>
+      </body>
     </html>
   );
 }

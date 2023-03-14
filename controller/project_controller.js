@@ -5,7 +5,10 @@ const project = express.Router();
 const Project= require("../models/project")
 
 project.get("/", (req, res) => {
-  res.json(Project);
+  res.render('Index', 
+  {
+    project: Project
+  });
 });
 
 project.get('/:arrayIndex', (req, res)=>{
