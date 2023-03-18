@@ -8,7 +8,7 @@ function Show({entry}) {
             <h3>{entry.name}</h3>
             {/* ternary if statement */}
             <p>and it {
-                entry.hasDatabase ? <span> does </span> : <span>does not</span>
+                entry.hasDatabase ? <span> does </span> : <span>does not </span>
 } 
 have a database </p>
             <img src={entry.image} alt={entry.name}/>
