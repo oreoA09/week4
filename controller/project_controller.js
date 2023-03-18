@@ -11,8 +11,18 @@ project.get("/", (req, res) => {
   });
 });
 
-project.get('/:arrayIndex', (req, res)=>{
-  res.send(Project[req.params.arrayIndex])
-})
+// show as json
+// project.get('/:arrayIndex', (req, res)=>{
+//   res.send(Project[req.params.arrayIndex])
+// })
+
+// show as html
+project.get("/:arrayIndex", (req, res) => {
+  res.render('Show', 
+  {
+    entry: Project[req.params.arrayIndex]
+  });
+});
+
 
 module.exports = project;

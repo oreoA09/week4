@@ -1,22 +1,24 @@
 const React = require('react');
 const DefaultLayout = require('./layouts/default');
 
-function HelloMessage({project}) {
+function Index({project}) {
   return (
     <DefaultLayout>
       <h2>Index</h2>
       {/* <p> I want to see {project[0].name}</p> */}
 
       {
-        project.map((item, i)=>{
+        project.map((entry, i)=>{
             return(
               // <div>
-              // <h2 key={i}>{item.name}</h2>
-              // <img src={item.image}/>
+              // <h2 key={i}>{entry.name}</h2>
+              // <img src={entry.image}/>
               // </div>
 
                 <li key={i}>
-                  <a href={`/project/${i}`}> {item.name} </a>
+                  <a href={`/project/${i}`}> {entry.name} </a>
+
+                  {/* <a href={`/projects`}>Go Back</a> */}
                   </li>
 
             )
@@ -26,4 +28,4 @@ function HelloMessage({project}) {
   );
 }
 
-module.exports = HelloMessage;
+module.exports = Index;
