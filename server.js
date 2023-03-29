@@ -6,12 +6,13 @@ require("dotenv").config();
 app.set("views", __dirname + "/views");
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
-
+app.use(express.urlencoded({extended: true}))
+// Styling
 app.use(express.static("public"));
 // end of middleware
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Welcome to my project app!");
 });
 
 const projectController = require("./controller/project_controller");

@@ -4,7 +4,7 @@ const DefaultLayout = require('./layouts/default');
 function Index({project}) {
   return (
     <DefaultLayout>
-      <h2>Index</h2>
+      <h2 className="trial">Index</h2>
       {/* <p> I want to see {project[0].name}</p> */}
 
       {

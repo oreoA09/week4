@@ -12,7 +12,7 @@ function DefaultLayout(html) {
           crossOrigin="anonymous"
         />
 
-        <link ref="stylesheet" href='/main.css'/>
+        <link ref="stylesheet" href="main.css"/>
 
         <link
           rel="stylesheet"
